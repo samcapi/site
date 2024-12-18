@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='imagens/favicon.ico') }}" type="image/x-icon">
+    <script src="{{ url_for('static', filename='script/script.js') }}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+
+
+    <h1>Login</h1>
+    <br><br>
+    <nav>
+              <ul class="navbar">
+                <li><a href="/">Início </a></li>>
+              </ul>
+    </nav>
+    <br><br>
+<form method="POST" action="{{ url_for('login') }}">
+
+    <input type="text" name="username" placeholder="Nome de Usuário" required>
+    <input type="password" name="password" placeholder="Senha" required>
+    <button type="submit">Entrar</button>
+</form>
+
+    <br><br>
+    <h4>
+    <p>  Ainda não tem conta? <a href="{{ url_for('register') }}">Cadastre-se</a></p>
+    </h4>
+    <br>
+    <footer>
+        <img src="{{ url_for('static', filename='imagens/loja.png') }}" alt="loja"><br>
+        <hr>
+        Somos uma Loja localizada em Curitiba que oferece produtos de alta qualidade e preços muito competitivos. Confira nossas ofertas!
+    <p>© 2024 VitrineOnline </p>
+
+    </footer>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Contatos</title>
+</head>
+<body>
+
+    <h1>Contatos:</h1>
+        <nav>
+      <ul class="navbar">
+        <li><a href="/">Início </a></li>
+        <li><a href="/relogios">Relógios</a></li>
+        <li><a href="fones" >Fones</a></li>
+        <li><a href="oculos">Óculos </a></li>
+
+
+      </ul>
+    </nav>
+    <h2>Email: </h2>
+        <ul>
+            <li>reclamefacil@gmail.com</li>
+        </ul>
+    <h2>Telefone</h2>
+        <ul>
+            <li>(41)9 88 656266</li>
+        </ul>
+    <footer>
+        <img src="{{ url_for('static', filename='imagens/loja.png') }}" alt="loja"><br>
+        <hr>
+        Somos uma Loja localizada em Curitiba que oferece produtos de alta qualidade e preços muito competitivos. Confira nossas ofertas!
+    </footer>
+
+</body>
+</html>

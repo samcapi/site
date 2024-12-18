@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <div id="message-bar">
+        <p id="message-text">Vitrine Online</p>
+    </div>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='imagens/favicon.ico') }}" type="image/x-icon">
+    <title>Fones de Ouvido</title>
+</head>
+<body>
+        <h1>Fones</h1>
+         <nav>
+              <ul class="navbar">
+                <li><a href="/">Início </a></li>
+                <li><a href="relogios">Relógios </a></li>
+                <li><a href="oculos">Óculos </a></li>
+
+                <li><a href="contatos">Contato</a></li>
+              </ul>
+         </nav>
+     <h2>BlueTooth</h2>
+</div>
+
+    <div class="product-carousel-container">
+        <button class="carousel-arrow left-arrow" onclick="moveLeft()">&#9664;</button>
+            <div class="product-row">
+
+                     <div class="product" data-item-id="7">
+                            <b><li>Fone De Ouvido F9-5 Tws Bluetoth Sem Fio Cor Da Luz Azul</li></b>
+                            <img src="{{ url_for('static', filename='imagens/fone1.png') }}" alt="Fone De Ouvido F9-5 Tws Bluetoth Sem Fio Cor Da Luz Azul">
+                            <br><b>R$ 19,80</b><br>
+                            <a href="/pagamento?produto_id=7&preco=19,80">
+                                <button>Comprar</button>
+                            </a>
+                    </div>
+
+                     <div class="product" data-item-id="8">
+                            <b><li>Fone De Ouvido Sem Fio Wireless M10 Damix Bluetooth Preto</li></b>
+                            <img src="{{ url_for('static', filename='imagens/fone2.png') }}" alt="Fone De Ouvido Sem Fio Wireless M10 Damix Bluetooth Preto">
+                            <br><b>R$ 49,90</b><br>
+                            <a href="/pagamento?produto_id=8&preco=49,90">
+                                <button>Comprar</button>
+                            </a>
+                    </div>
+
+                   <div class="product" data-item-id="9">
+                            <b><li>Fone De Ouvido Bluetooth Sem Fio Com Microfone Gamer 510 Bt</li></b>
+                            <img src="{{ url_for('static', filename='imagens/fone3.png') }}" alt="Fone De Ouvido Bluetooth Sem Fio Com Microfone Gamer 510 Bt">
+                            <br><b>R$ 46,74</b><br>
+                            <a href="/pagamento?produto_id=9&preco=46,74">
+                                <button>Comprar</button>
+                            </a>
+                    </div>
+
+                 <div class="product" data-item-id="10">
+                            <b><li>Fones de ouvido para dormir, máscara ocular, Bluetooth 5.2</li></b>
+                            <img src="{{ url_for('static', filename='imagens/fone4.png') }}" alt="Fones de ouvido para dormir, máscara ocular Bluetooth, sem fio, Bluetooth 5.2">
+                            <br><b>R$ 40,00</b><br>
+                            <a href="/pagamento?produto_id=10&preco=40,00">
+                                <button>Comprar</button>
+                            </a>
+                 </div>
+            </div>
+        <button class="carousel-arrow right-arrow" onclick="moveRight()">&#9654;</button>
+</div>
+    <footer>
+        <img src="{{ url_for('static', filename='imagens/loja.png') }}" alt="loja"><br>
+        <hr>
+        Somos uma Loja localizada em Curitiba que oferece produtos de alta qualidade e preços muito competitivos. Confira nossas ofertas!
+    <p>© 2024 VitrineOnline </p>
+
+    </footer>
+
+</body>
+</html>

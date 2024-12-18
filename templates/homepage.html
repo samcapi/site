@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='imagens/favicon.ico') }}" type="image/x-icon">
+    <script src=>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="keywords" content="loja online, relógios, fones bluetooth, óculos de sol, importados, ofertas">
+    <meta name="author" content="VitrineOnline">
+
+    <title>VitrineOnline</title>
+
+</head>
+<body class="template-colection" data-center-text="True">
+    <div id="message-bar">
+        <p id="message-text">Vitrine Online</p>
+    </div>
+    <h1>VitrineOnline<br><img src="{{ url_for('static', filename='imagens/loja.png') }}" alt="loja"><br></h1>
+    <div class="button-container">
+        <a href="{{ url_for('register') }}" class="icon-button">
+            <i class="fas fa-user-plus"></i>
+        </a>
+        <a href="{{ url_for('login') }}" class="icon-button">
+            <i class="fas fa-sign-in-alt"></i>
+        </a>
+    </div>
+
+        <nav>
+              <ul class="navbar">
+
+                <li><a href="relogios">Relógios </a></li>
+                <li><a href="fones">Fones </a></li>
+                <li><a href="oculos">Óculos </a></li>
+
+                <li><a href="contatos">Contato</a></li>
+              </ul>
+        </nav>
+    <section class="items">
+        <h2>Relógios Importados</h2>
+        <div class="product-carousel-container">
+            <button class="carousel-arrow left-arrow" onclick="moveLeft()">&#9664;</button>
+                    <div class="product-row">
+
+                        <div class="product" data-item-id="1">
+                            <b><li>Relógio Invicta Venom</li></b>
+                            <img src="{{ url_for('static', filename='imagens/relogio1.png') }}" alt="Relógio Invicta">
+                            <br><b>R$  ̶1̶2̶0̶0̶,̶0̶0̶</b><br>
+                            <br><b>R$ 940,50</b><br>
+                            <a href="/pagamento?produto_id=1&preco=940.50">
+                                <button>Comprar</button>
+                            </a>
+                        </div>
+
+                        <div class="product" data-item-id="2">
+                            <b><li>Relógio Festina Masculino Aço Prateado</li></b>
+                            <img src="{{ url_for('static', filename='imagens/relogio2.png') }}" alt="Relógio Invicta Specialty 28713 Masculino">
+                            <br><b>R$ 553,00</b><br>
+                            <a href="/pagamento?produto_id=2&preco=553,00">
+                                <button>Comprar</button>
+                            </a>
+                        </div>
+
+                        <div class="product" data-item-id="3">
+                            <b><li>Relógio Masculino Orient</li></b>
+                            <img src="{{ url_for('static', filename='imagens/relogio3.png') }}" alt="Relógio Masculino Orient">
+                            <br><b>R$  ̶9̶0̶0̶,̶0̶0̶</b><br>
+                            <br><b>R$ 758,00</b><br>
+                            <a href="/pagamento?produto_id=3&preco=758,00">
+                                <button>Comprar</button>
+                            </a>
+                        </div>
+
+                        <div class="product" data-item-id="15">
+                            <b><li>Apple Watch SE GPS (2da gen) - Caixa meia-noite de alumínio 44 mm</li></b>
+                            <img src="{{ url_for('static', filename='imagens/relogio7.png') }}" alt="Relógio Masculino Orient">
+                            <br><b>R$ 2.098</b><br>
+                            <a href="/pagamento?produto_id=3&preco=758,00">
+                                <button>Comprar</button>
+                            </a>
+                        </div>
+
+                    </div>
+            <button class="carousel-arrow right-arrow" onclick="moveRight()">&#9654;</button>
+        </div>
+    <div class="wishlist-container">
+        <h2>Relógios Nacionais</h2>
+        <div class="product-carousel-container">
+            <button class="carousel-arrow left-arrow" onclick="moveLeft()">&#9664;</button>
+                    <div class="product-row">
+                        <div class="product" data-item-id="4">
+                            <b><li>Z Relógio Eletrônico Analógico Digital</li></b>
+                            <img src="{{ url_for('static', filename='imagens/relogio4.png') }}" alt="Z Relógio Eletrônico À Prova D'água Analógico Digital Foxbox zq1">
+                            <br><b>R$ 157,80</b><br>
+                            <a href="/pagamento?produto_id=4&preco=157,80">
+                                <button>Comprar</button>
+                            </a>
+                        </div>
+
+                         <div class="product" data-item-id="5">
+                            <b><li>Relógio Santis Nautilus Aço Inoxidável Polido Preto</li></b>
+                            <img src="{{ url_for('static', filename='imagens/relogio5.png') }}" alt="Relógio Santis Nautilus Aprova D'água Em Aço Inoxidável Polido Preto">
+                            <br><b>R$ R$ 167,00</b><br>
+                            <a href="/pagamento?produto_id=5&preco=R$ 167,00">
+                                <button>Comprar</button>
+                            </a>
+                         </div>
+
+                        <div class="product" data-item-id="6">
+                            <b><li>Curren-relógio De Pulso Masculino De Quartzo</li></b>
+                            <img src="{{ url_for('static', filename='imagens/relogio6.png') }}" alt="Curren-relógio De Pulso Masculino De Quartzo, Esportivo, À Prova D'água, (RG Bb Box)">
+                            <br><b>R$ 215,20</b><br>
+                            <a href="/pagamento?produto_id=6&preco=215,20">
+                                <button>Comprar</button>
+                            </a>
+                        </div>
+
+                        <div class="product" data-item-id="16">
+                            <b><li>Relógio Casio Masculino Digital World Time AE-1200WHD</li></b>
+                            <img src="{{ url_for('static', filename='imagens/relogio8.png') }}" alt="Z Relógio Eletrônico À Prova D'água Analógico Digital Foxbox zq1">
+                            <br><b>R$ 299,00</b><br>
+                            <a href="/pagamento?produto_id=4&preco=299,80">
+                                <button>Comprar</button>
+                            </a>
+                        </div>
+                    </div>
+                <button class="carousel-arrow right-arrow" onclick="moveRight()">&#9654;</button>
+        </div>
+    </div>
+        <audio id="musica-fundo" autoplay loop>
+          <source src="{{ url_for('static', filename='audio/musica.mp3') }}" type="audio/mp3">
+          Seu navegador não suporta o elemento de áudio.
+        </audio>
+
+    </div>
+        <h2>Fones BlueTooth</h2>
+    <div class="product-carousel-container">
+        <button class="carousel-arrow left-arrow" onclick="moveLeft()">&#9664;</button>
+            <div class="product-row">
+
+                     <div class="product" data-item-id="7">
+                            <b><li>Fone De Ouvido F9-5 Tws Bluetoth Sem Fio Cor Da Luz Azul</li></b>
+                            <img src="{{ url_for('static', filename='imagens/fone1.png') }}" alt="Fone De Ouvido F9-5 Tws Bluetoth Sem Fio Cor Da Luz Azul">
+                            <br><b>R$ 19,80</b><br>
+                            <a href="/pagamento?produto_id=7&preco=19,80">
+                                <button>Comprar</button>
+                            </a>
+                    </div>
+
+                     <div class="product" data-item-id="8">
+                            <b><li>Fone De Ouvido Sem Fio Wireless M10 Damix Bluetooth Preto</li></b>
+                            <img src="{{ url_for('static', filename='imagens/fone2.png') }}" alt="Fone De Ouvido Sem Fio Wireless M10 Damix Bluetooth Preto">
+                            <br><b>R$ 49,90</b><br>
+                            <a href="/pagamento?produto_id=8&preco=49,90">
+                                <button>Comprar</button>
+                            </a>
+                    </div>
+
+                   <div class="product" data-item-id="9">
+                            <b><li>Fone De Ouvido Bluetooth Sem Fio Com Microfone Gamer 510 Bt</li></b>
+                            <img src="{{ url_for('static', filename='imagens/fone3.png') }}" alt="Fone De Ouvido Bluetooth Sem Fio Com Microfone Gamer 510 Bt">
+                            <br><b>R$ 46,74</b><br>
+                            <a href="/pagamento?produto_id=9&preco=46,74">
+                                <button>Comprar</button>
+                            </a>
+                    </div>
+
+                 <div class="product" data-item-id="10">
+                            <b><li>Fones de ouvido para dormir, máscara ocular, Bluetooth 5.2</li></b>
+                            <img src="{{ url_for('static', filename='imagens/fone4.png') }}" alt="Fones de ouvido para dormir, máscara ocular Bluetooth, sem fio, Bluetooth 5.2">
+                            <br><b>R$  ̶6̶4̶,̶9̶0̶</b><br>
+                            <br><b>R$ 40,00</b><br>
+                            <a href="/pagamento?produto_id=10&preco=40,00">
+                                <button>Comprar</button>
+                            </a>
+                 </div>
+            </div>
+        <button class="carousel-arrow right-arrow" onclick="moveRight()">&#9654;</button>
+    </div>
+        <h2>Óculos de sol</h2>
+    <div class="product-carousel-container">
+        <button class="carousel-arrow left-arrow" onclick="moveLeft()">&#9664;</button>
+                <div class="product-row">
+
+                     <div class="product" data-item-id="7">
+                            <b><li>Óculos de Sol Sunzest Cruiser - Preto Fosco</li></b>
+                            <img src="{{ url_for('static', filename='imagens/oculos1.png') }}" alt="Óculos de Sol Sunzest Cruiser - Preto Fosco">
+                            <br><b>R$ 99,00</b><br>
+                            <a href="/pagamento?produto_id=11&preco=99,00">
+                                <button>Comprar</button>
+                            </a>
+                     </div>
+
+                     <div class="product" data-item-id="7">
+                            <b><li>Óculos de Sol Sunzest Grind - Preto Polarizado</li></b>
+                            <img src="{{ url_for('static', filename='imagens/oculos2.png') }}" alt="Óculos de Sol Sunzest Grind - Preto Polarizado">
+                            <br><b>R$  ̶9̶9̶,̶0̶0̶</b><br>
+                            <br><b>R$ 59,40</b><br>
+                            <a href="/pagamento?produto_id=12&preco=59,40">
+                                <button>Comprar</button>
+                            </a>
+                     </div>
+
+                     <div class="product" data-item-id="7">
+                            <b><li>Óculos de sol Sunzest Miami - Preto Brilhante</li></b>
+                            <img src="{{ url_for('static', filename='imagens/oculos3.png') }}" alt="Óculos de sol Sunzest Miami - Preto Brilhante">
+                            <br><b>R$ 99,00</b><br>
+                            <a href="/pagamento?produto_id=13&preco=99,00">
+                                <button>Comprar</button>
+                            </a>
+                     </div>
+
+                     <div class="product" data-item-id="7">
+                            <b><li>Óculos de Sol Oxer com Proteção Solar Casual Redondo Adulto</li></b>
+                            <img src="{{ url_for('static', filename='imagens/oculos4.png') }}" alt="Óculos de Sol Oxer com Proteção Solar Casual Redondo Adulto">
+                            <br><b>R$  ̶9̶9̶,̶0̶0̶</b><br>
+                            <br><b>R$ 49,99</b><br>
+                            <a href="/pagamento?produto_id=14&preco=49,99">
+                                <button>Comprar</button>
+                            </a>
+                     </div>
+                </div>
+        <button class="carousel-arrow right-arrow" onclick="moveRight()">&#9654;</button>
+    </div>
+    </section>
+
+        <h2>Adendo</h2>
+        <dl>
+            <dt>Importados:</dt>
+            <dd>Taxa de importação inclusa, frete gratuito. Não se aplica aos estados do Norte e Nordeste, exceto algumas cidades.</dd>
+            <dt>Nacionais:</dt>
+            <dd>Frete de acordo com a transportadora</dd>
+        </dl>
+    <h2>Links</h2>
+        <p><a href="https://m.youtube.com/watch?v=Swk6tPchN1Y&pp=ygUOI2HDp29pbXBvcnRhZG8%3D" target="_blank" rel="external" >Demonstração</a></p>
+
+    <footer>
+    <div class="footer-links">
+        <img src="{{ url_for('static', filename='imagens/loja.png') }}" alt="loja"><br>
+        <hr>
+       Uma Loja localizada em Curitiba que oferece produtos de alta qualidade e preços muito competitivos. Confira nossas ofertas!
+        <a href="/sobre">Sobre</a> |
+        <a href="/termos">Termos de Serviço</a> |
+        <a href="/privacidade">Política de Privacidade</a>
+    </div>
+    <p>© 2024 VitrineOnline - Todos os direitos reservados.</p>
+</footer>
+
+
+    <script src="{{ url_for('static', filename='script/script.js') }}"></script>
+
+</body>
+</html>
+

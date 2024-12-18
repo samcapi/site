@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Pagamento</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='script/script.js') }}"></script>
+</head>
+<body>
+    <h1>Pagamento</h1>
+    <div class="imagem-container">
+        <img src="{{ imagem }}" alt="{{ nome }}">
+    </div>
+    <div class="info-container">
+        <p>
+            <span>Produto: <strong>{{ nome }}</strong></span>
+            <span>Preço: <strong>R$ {{ preco }}</strong></span>
+            <span>Descrição: <strong>{{ descricao }}</strong></span>
+            <span>Especificações: <strong>{{ especificacoes }}</strong></span>
+        </p>
+    </div>
+
+
+        <h2>Endereço de Entrega</h2>
+        <form action="/confirmar-pagamento" method="POST">
+            <input type="hidden" name="produto_nome" value="{{ nome }}">
+            <input type="hidden" name="preco" value="{{ preco }}">
+
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" placeholder="Digite o CEP" required>
+
+            <label for="rua">Rua:</label>
+            <input type="text" id="rua" name="rua" placeholder="Digite o nome da rua" required>
+
+            <label for="numero">Número:</label>
+            <input type="number" id="numero" name="numero" placeholder="Número da residência" required>
+
+            <label for="complemento">Complemento (Opcional):</label>
+            <input type="text" id="complemento" name="complemento" placeholder="Ex.: Apto, bloco">
+
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" name="bairro" placeholder="Digite o bairro" required>
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade" required>
+
+            <label for="estado">Estado:</label>
+            <input type="text" id="estado" name="estado" placeholder="Digite o estado" required>
+
+    <h2>Escolha o Método de Pagamento</h2>
+    <form action="/confirmar-pagamento" method="POST">
+        <input type="hidden" name="produto_nome" value="{{ nome }}">
+        <input type="hidden" name="preco" value="{{ preco }}">
+        <input type="hidden" name="imagem" value="{{ imagem }}">
+
+        <label for="metodo">Escolha o método de pagamento:</label>
+        <select id="metodo" name="metodo" onchange="exibirFormularioPagamento()">
+            <option value="">Selecione</option>
+            <option value="Pix">Pix</option>
+            <option value="Cartão de Crédito">Cartão de Crédito</option>
+            <option value="Boleto">Boleto</option>
+        </select>
+
+        <!-- Div oculta com formulário de pagamento específico -->
+        <div id="form-pix" style="display: none; margin-top: 20px;">
+            <h3>Insira as informações do Pix</h3>
+            <label for="chave_pix">Chave Pix:</label>
+            <input type="text" id="chave_pix" name="chave_pix" placeholder="Digite sua chave Pix">
+        </div>
+
+        <div id="form-cartao" style="display: none; margin-top: 20px;">
+            <h3>Insira as informações do Cartão de Crédito</h3>
+            <label for="numero_cartao">Número do Cartão:</label>
+            <input type="text" id="numero_cartao" name="numero_cartao" placeholder="Número do cartão" required>
+
+            <label for="validade">Validade (MM/AA):</label>
+            <input type="text" id="validade" name="validade" placeholder="MM/AA" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" placeholder="CVV" required>
+
+            <label for="nome_titular">Nome do Titular:</label>
+            <input type="text" id="nome_titular" name="nome_titular" placeholder="Nome como no cartão" required>
+        </div>
+
+        <button type="submit">Confirmar Pagamento</button>
+    </form>
+
+    <script>
+        // Função para exibir o formulário de acordo com o método de pagamento selecionado
+        function exibirFormularioPagamento() {
+            const metodoPagamento = document.getElementById('metodo').value;
+            const formPix = document.getElementById('form-pix');
+            const formCartao = document.getElementById('form-cartao');
+
+            // Oculta todos os formulários inicialmente
+            formPix.style.display = 'none';
+            formCartao.style.display = 'none';
+
+            // Exibe o formulário correspondente
+            if (metodoPagamento === 'Pix') {
+                formPix.style.display = 'block';
+            } else if (metodoPagamento === 'Cartão de Crédito') {
+                formCartao.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

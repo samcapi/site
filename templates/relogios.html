@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <div id="message-bar">
+        <p id="message-text">Vitrine Online</p>
+    </div>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='imagens/favicon.ico') }}" type="image/x-icon">
+    <title>Relógios</title>
+</head>
+<body class="template-colection" data-center-text="True">
+    <h1>Relógios</h1>
+            <nav>
+              <ul class="navbar">
+                <li><a href="/">Início </a></li>
+                <li><a href="fones" >Fones</a></li>
+                <li><a href="oculos">Óculos </a></li>
+
+                <li><a href="contatos">Contato</a></li>
+              </ul>
+            </nav>
+    <section class="items">
+        <h2>Relógios Importados</h2>
+        <div class="product-carousel-container">
+            <button class="carousel-arrow left-arrow" onclick="moveLeft()">&#9664;</button>
+                    <div class="product-row">
+
+                        <div class="product" data-item-id="1">
+                            <b><li>Relógio Invicta Venom</li></b>
+                            <img src="{{ url_for('static', filename='imagens/relogio1.png') }}" alt="Relógio Invicta">
+                            <br><b>R$ 940,50</b><br>
+                            <a href="/pagamento?produto_id=1&preco=940.50">
+                                <button>Comprar</button>
+                            </a>
+                        </div>
+
+                        <div class="product" data-item-id="2">
+                            <b><li>Relógio Festina Masculino Aço Prateado</li></b>
+                            <img src="{{ url_for('static', filename='imagens/relogio2.png') }}" alt="Relógio Invicta Specialty 28713 Masculino">
+                            <br><b>R$ 553,00</b><br>
+                            <a href="/pagamento?produto_id=2&preco=553,00">
+                                <button>Comprar</button>
+                            </a>
+                        </div>
+
+                        <div class="product" data-item-id="3">
+                            <b><li>Relógio Masculino Orient</li></b>
+                            <img src="{{ url_for('static', filename='imagens/relogio3.png') }}" alt="Relógio Masculino Orient">
+                            <br><b>R$ 758,00</b><br>
+                            <a href="/pagamento?produto_id=3&preco=758,00">
+                                <button>Comprar</button>
+                            </a>
+                        </div>
+
+                        <div class="product" data-item-id="15">
+                            <b><li>Apple Watch SE GPS (2da gen) - Caixa meia-noite de alumínio 44 mm</li></b>
+                            <img src="{{ url_for('static', filename='imagens/relogio7.png') }}" alt="Relógio Masculino Orient">
+                            <br><b>R$ 2.098</b><br>
+                            <a href="/pagamento?produto_id=3&preco=758,00">
+                                <button>Comprar</button>
+                            </a>
+                        </div>
+
+                    </div>
+            <button class="carousel-arrow right-arrow" onclick="moveRight()">&#9654;</button>
+        </div>
+    <div class="wishlist-container">
+        <h2>Relógios Nacionais</h2>
+        <div class="product-carousel-container">
+            <button class="carousel-arrow left-arrow" onclick="moveLeft()">&#9664;</button>
+                    <div class="product-row">
+                        <div class="product" data-item-id="4">
+                            <b><li>Z Relógio Eletrônico Analógico Digital</li></b>
+                            <img src="{{ url_for('static', filename='imagens/relogio4.png') }}" alt="Z Relógio Eletrônico À Prova D'água Analógico Digital Foxbox zq1">
+                            <br><b>R$ 157,80</b><br>
+                            <a href="/pagamento?produto_id=4&preco=157,80">
+                                <button>Comprar</button>
+                            </a>
+                        </div>
+
+                         <div class="product" data-item-id="5">
+                            <b><li>Relógio Santis Nautilus Aço Inoxidável Polido Preto</li></b>
+                            <img src="{{ url_for('static', filename='imagens/relogio5.png') }}" alt="Relógio Santis Nautilus Aprova D'água Em Aço Inoxidável Polido Preto">
+                            <br><b>R$ R$ 167,00</b><br>
+                            <a href="/pagamento?produto_id=5&preco=R$ 167,00">
+                                <button>Comprar</button>
+                            </a>
+                         </div>
+
+                        <div class="product" data-item-id="6">
+                            <b><li>Curren-relógio De Pulso Masculino De Quartzo</li></b>
+                            <img src="{{ url_for('static', filename='imagens/relogio6.png') }}" alt="Curren-relógio De Pulso Masculino De Quartzo, Esportivo, À Prova D'água, (RG Bb Box)">
+                            <br><b>R$ 215,20</b><br>
+                            <a href="/pagamento?produto_id=6&preco=215,20">
+                                <button>Comprar</button>
+                            </a>
+                        </div>
+
+                        <div class="product" data-item-id="16">
+                            <b><li>Relógio Casio Masculino Digital World Time AE-1200WHD</li></b>
+                            <img src="{{ url_for('static', filename='imagens/relogio8.png') }}" alt="Z Relógio Eletrônico À Prova D'água Analógico Digital Foxbox zq1">
+                            <br><b>R$ 299,00</b><br>
+                            <a href="/pagamento?produto_id=4&preco=299,80">
+                                <button>Comprar</button>
+                            </a>
+                        </div>
+                    </div>
+                <button class="carousel-arrow right-arrow" onclick="moveRight()">&#9654;</button>
+        </div>
+    </div>
+        <button class="carousel-arrow right-arrow" onclick="moveRight()">&#9654;</button>
+    <footer>
+        <img src="{{ url_for('static', filename='imagens/loja.png') }}" alt="loja"><br>
+        <hr>
+        Somos uma Loja localizada em Curitiba que oferece produtos de alta qualidade e preços muito competitivos. Confira nossas ofertas!
+    <p>© 2024 VitrineOnline </p>
+
+    </footer>
+
+</body>
+</html>

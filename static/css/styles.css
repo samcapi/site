@@ -1,0 +1,406 @@
+body {
+    background-color: burlywood;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif; /* Exemplo de fonte do Google Fonts */
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  border: 8px solid black;
+  font-size: 60px
+    padding: 40px;
+    background-image: url("../imagens/fundoh2.jpg"); /* Caminho relativo para sua imagem */
+    background-size: cover; /* A imagem cobre toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    border-radius: 10px; /* Bordas arredondadas (opcional) */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+h2 {
+    color: white;
+    background-color:coral;
+    text-align: center;
+
+}
+h4{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border: 3px solid black;
+    background-color: darkorange;
+}
+.info-container p span {
+    display: inline-block; /* Força o texto a ficar na mesma linha */
+    margin-right: 10px; /* Espaçamento entre os itens */
+}
+
+body {
+    color: black;
+    background-color: burlywood;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    letter-spacing: 2px;
+
+a {
+    letter-spacing: 4px;
+     margin-left: 20px;
+     padding-left: 20px;
+     padding-bottom: 20px;
+         margin-left: -15px;
+
+}
+
+img {
+        transition: transform 0.3s ease;
+        margin: 0 auto;
+    }
+
+    img:hover {
+        transform: scale(1.1);
+    }
+p {
+      justify-content: center;
+      align-items: center;
+      width: 20%;
+      margin: 0 auto;
+}
+
+    .navbar {
+      background-color: chocolate;
+      padding: 15px 30px;
+      display: flex;
+      color: white;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Logo */
+    .navbar h1 {
+      color: darkorange;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    /* Menu Links */
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      color: darkorange;
+      gap: 20px;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: darkorange;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 10px 15px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Hover Effect */
+    .navbar ul li a:hover {
+      background-color: #388E3C;
+      border-radius: 5px;
+    }
+
+    /* Botão de Ação */
+    .navbar .btn {
+      background-color: #C8E6C9;
+      color: #4CAF50;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .navbar .btn:hover {
+      background-color: #A5D6A7;
+      transform: scale(1.05);
+    }
+    .navbar a:visited {
+    color: #ffffff; /* Mesma cor do link não visitado */
+    }
+
+
+footer {
+  text-align: center;
+  padding: 40px;
+  background-color: moccasin;
+}
+
+.footer-image {
+  width: 200px;
+  height: auto;
+  padding-bottom: 40
+}
+
+dl {
+    padding-left: 60px;
+    padding-bottom: 20px;
+}
+#message-bar {
+    width: 100%;
+    background-color: #ffcc00; /* Cor de fundo da faixa */
+    color: #000; /* Cor do texto */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+    position: fixed;
+    top: 0;
+    z-index: 1000; /* Mantém a faixa no topo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    margin-top: 50px; /* Ajusta o conteúdo para não sobrepor a faixa */
+}
+
+b{
+    padding-bottom: 40px;
+}
+
+.product-carousel-container {
+    position: relative;
+    width: 80%;
+    max-width: 1000px;
+    margin: 20px auto; /* Centraliza o carrossel no corpo */
+    overflow: hidden;
+}
+
+.product-row {
+    display: flex;
+    justify-content: center; /* Centraliza os produtos horizontalmente */
+    align-items: center; /* Centraliza verticalmente dentro da linha */
+    gap: 20px; /* Espaço entre os produtos */
+    transition: transform 0.4s ease-in-out;
+}
+
+.product {
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 150px;
+    max-width: 200px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem dentro do produto */
+    width: 100px;
+    height: 100px;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.left-arrow {
+    left: 0;
+}
+
+.right-arrow {
+    right: 0;
+}
+
+.carousel-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.carousel-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+section {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-row {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+
+}
+
+.product {
+    text-align: center;
+    width: 200px;
+}
+
+.payment-container input[type="text"],
+.payment-container input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.payment-container input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.payment-container label {
+    font-size: 14px;
+    text-align: left;
+    display: block;
+    margin-top: 10px;
+    color: #333;
+}
+div {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.imagem-produto {
+    display: block;
+    margin: 0 auto;  /* Centraliza horizontalmente */
+    max-width: 100%; /* Ajuste responsivo */
+    height: auto;
+}
+
+/* Estilo geral para os botões */
+button {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+    color: white;
+
+    background-color: chocolate; /* Verde primário */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* Efeito ao passar o mouse */
+.button-container button {
+    background-color: chocolate; /* Cor de fundo */
+
+    color: white; /* Cor do texto */
+    border: 2px solid black; /* Borda */
+    padding: 10px 20px; /* Espaçamento interno */
+    text-align: center; /* Alinhamento do texto */
+    text-decoration: none; /* Remover sublinhado */
+    display: inline-block; /* Exibição como bloco inline */
+    font-size: 16px; /* Tamanho do texto */
+    margin: 4px 2px; /* Espaçamento externo */
+    cursor: pointer; /* Cursor ao passar o mouse */
+    border-radius: 5px; /* Borda arredondada */
+    transition: background-color 0.3s, color 0.3s; /* Efeito suave ao passar o mouse */
+}
+
+.button-container button:hover {
+    background-color: white; /* Cor de fundo ao passar o mouse */
+    color: #4CAF50; /* Cor do texto ao passar o mouse */
+
+}
+
+
+/* Ajuste para links nos botões */
+.button-container a {
+    text-decoration: none;
+
+}
+
+.product-carousel-container {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+.carousel-container {
+    overflow-x: hidden; /* Remove a barra horizontal */
+    overflow-y: hidden; /* Remove a barra vertical, se existir */
+    display: flex; /* Organiza os itens horizontalmente */
+    white-space: nowrap; /* Impede que os itens quebrem linha */
+    box-sizing: border-box; /* Evita problemas de largura excessiva */
+}
+
+
+
+.product-row {
+    display: flex;
+    flex-wrap: nowrap;
+
+    scroll-behavior: smooth;
+}
+
+.product {
+    flex: 0 0 auto;
+    margin-right: 10px;
+    width: 200px; /* Ajuste o tamanho conforme necessário */
+    text-align: center;
+}
+
+.icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: orange; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+.icon-button i {
+    margin-right: 5px; /* Espaço entre o ícone e o texto */
+}
+
+.icon-button:hover {
+    background-color: darkorange; /* Cor ao passar o mouse */
+}
+
+

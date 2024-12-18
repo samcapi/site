@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <div id="message-bar">
+        <p id="message-text">Vitrine Online</p>
+    </div>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='imagens/favicon.ico') }}" type="image/x-icon">
+    <title>Óculos</title>
+</head>
+<body>
+    <h1>Óculos</h1>
+            <nav>
+              <ul class="navbar">
+                <li><a href="/">Início </a></li>
+                <li><a href="relogios">Relógios </a></li>
+                <li><a href="fones" >Fones</a></li>
+
+                <li><a href="contatos">Contato</a></li>
+              </ul>
+            </nav>
+        <h2>Óculos de sol</h2>
+
+     <div class="product-carousel-container">
+        <button class="carousel-arrow left-arrow" onclick="moveLeft()">&#9664;</button>
+                <div class="product-row">
+
+                     <div class="product" data-item-id="7">
+                            <b><li>Óculos de Sol Sunzest Cruiser - Preto Fosco</li></b>
+                            <img src="{{ url_for('static', filename='imagens/oculos1.png') }}" alt="Óculos de Sol Sunzest Cruiser - Preto Fosco">
+                            <br><b>R$ 99,00</b><br>
+                            <a href="/pagamento?produto_id=11&preco=99,00">
+                                <button>Comprar</button>
+                            </a>
+                     </div>
+
+                     <div class="product" data-item-id="7">
+                            <b><li>Óculos de Sol Sunzest Grind - Preto Polarizado</li></b>
+                            <img src="{{ url_for('static', filename='imagens/oculos2.png') }}" alt="Óculos de Sol Sunzest Grind - Preto Polarizado">
+                            <br><b>R$ 59,40</b><br>
+                            <a href="/pagamento?produto_id=12&preco=59,40">
+                                <button>Comprar</button>
+                            </a>
+                     </div>
+
+                     <div class="product" data-item-id="7">
+                            <b><li>Óculos de sol Sunzest Miami - Preto Brilhante</li></b>
+                            <img src="{{ url_for('static', filename='imagens/oculos3.png') }}" alt="Óculos de sol Sunzest Miami - Preto Brilhante">
+                            <br><b>R$ 99,00</b><br>
+                            <a href="/pagamento?produto_id=13&preco=99,00">
+                                <button>Comprar</button>
+                            </a>
+                     </div>
+
+                     <div class="product" data-item-id="7">
+                            <b><li>Óculos de Sol Oxer com Proteção Solar Casual Redondo Adulto</li></b>
+                            <img src="{{ url_for('static', filename='imagens/oculos4.png') }}" alt="Óculos de Sol Oxer com Proteção Solar Casual Redondo Adulto">
+                            <br><b>R$ 49,99</b><br>
+                            <a href="/pagamento?produto_id=14&preco=49,99">
+                                <button>Comprar</button>
+                            </a>
+                     </div>
+                </div>
+        <button class="carousel-arrow right-arrow" onclick="moveRight()">&#9654;</button>
+    </div>
+
+    <footer>
+        <img src="{{ url_for('static', filename='imagens/loja.png') }}" alt="loja"><br>
+        <hr>
+        Somos uma Loja localizada em Curitiba que oferece produtos de alta qualidade e preços muito competitivos. Confira nossas ofertas!
+    <p>© 2024 VitrineOnline </p>
+    
+    </footer>
+</body>
+</html>
